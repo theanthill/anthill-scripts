@@ -7,10 +7,10 @@ async function triggerSeigniorage() {
     const date = new Date();
     const currentHour = date.getHours();
 
+    console.log(`[${date}]`);
+
     if (!hours.includes(currentHour)) {
-        console.log(
-            `Waiting for next hour (Current hour = ${currentHour}, Target hours = [${hours}])`
-        );
+        console.log(`Waiting for next hour (Target hours = [${hours}])`);
         return;
     }
 
