@@ -1,0 +1,22 @@
+{
+  "name": "anthill-scripts",
+  "version": "0.0.1",
+  "description": "Site management scripts",
+  "main": "scripts/trigger-seigniorage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/theanthill/anthill-scripts.git"
+  },
+  "author": "Worker Ant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theanthill/anthill-scripts/issues"
+  },
+  "homepage": "https://github.com/theanthill/anthill-scripts#readme",
+  "dependencies": {
+    "ethers": "^5.4.0"
+  }
+}
