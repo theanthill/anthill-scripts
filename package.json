@@ -4,7 +4,8 @@
   "description": "Site management scripts",
   "main": "scripts/trigger-seigniorage.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo \"Done!\"",
+    "test": "echo \"Done!\""
   },
   "repository": {
     "type": "git",
