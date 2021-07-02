@@ -19,8 +19,11 @@ async function triggerSeigniorage() {
             wallet
         );
 
+        console.log("Allocating seigniorage...");
         const tx = await treasury.functions.allocateSeigniorage();
+        console.log("Waiting for confirmation...");
         await tx.wait();
+        console.log("DONE!");
     } catch (err) {
         console.log(err);
     }
