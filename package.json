@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/theanthill/anthill-scripts#readme",
   "dependencies": {
+    "@bandprotocol/bandchain.js": "^1.2.1",
     "ethers": "^5.4.0"
   }
 }
