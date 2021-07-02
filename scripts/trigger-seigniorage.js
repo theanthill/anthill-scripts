@@ -1,7 +1,7 @@
 const ethers = require("ethers");
 
 async function triggerSeigniorage() {
-    const hours = [8, 12, 16, 19, 20, 23];
+    const hours = [8, 12, 16, 20, 23];
 
     const date = new Date();
     const currentHour = date.getHours();
