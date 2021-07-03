@@ -3,12 +3,12 @@ const ethers = require("ethers");
 const { formatUnits } = require("ethers/lib/utils");
 
 const {
-    getChainlinkPairAddress,
+    getChainlinkPair,
     ChainlinkV3Interface,
 } = require("./chainlink-library");
 
 async function getRoundData() {
-    const BNBUSDAddress = getChainlinkPairAddress("BUSD", "USD", "testnet");
+    const BNBUSDPair = getChainlinkPair("BUSD", "USD", "testnet");
 
     const provider = new ethers.providers.JsonRpcProvider(
         "https://data-seed-prebsc-1-s1.binance.org:8545"
@@ -20,13 +20,13 @@ async function getRoundData() {
     );
 
     const ChainlinkOracle = new ethers.Contract(
-        BNBUSDAddress,
+        BNBUSDPair.address,
         ChainlinkV3Interface,
         wallet
     );
 
     const roundData = await ChainlinkOracle.latestRoundData();
-    console.log(formatUnits(roundData.answer, 8));
+    console.log(formatUnits(roundData.answer, BNBUSDPair.decimals));
 }
 
 getRoundData();
